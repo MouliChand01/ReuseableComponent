@@ -1,0 +1,12 @@
+<div class="formdata">
+    <div class="dynamicData">
+        <label for="members">MEMBERS</label> &nbsp; &nbsp;  &nbsp; &nbsp; 
+        <label for="dob">Date Of Birth</label><br>
+        <select id="members" [(ngModel)]="Selectvalue" (change)="selectChange()">
+            <option disabled selected >Select Option</option>
+            <option *ngFor="let user of userData" value={{user.name}}>{{user.name}}</option>
+        </select>
+        &nbsp; &nbsp; &nbsp; &nbsp; 
+         <input id="dob" type="date" name="date" [max]="getToday()">  <!-- min-pastdate desable,max-featuredate desable --> 
+    </div>
+</div>
